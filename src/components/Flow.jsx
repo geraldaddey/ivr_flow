@@ -17,10 +17,6 @@ import CallerIntent from "./CallerIntent";
 
 import "reactflow/dist/style.css";
 import "../overview.css";
-//
-// const nodeTypes = {
-//   custom: Salesforce,
-// };
 
 const minimapStyle = {
   height: 120,
@@ -39,24 +35,27 @@ const OverviewFlow = () => {
     []
   );
 
-  const nodeTypes = useMemo(() => ({ custom: Salesforce }), []);
+  const nodeTypes = useMemo(
+    () => ({ custom: Salesforce, caller: CallerIntent }),
+    []
+  );
 
   // we are using a bit of a shortcut here to adjust the edge type
   // this could also be done with a custom edge for example
-  const edgesWithUpdatedTypes = edges.map((edge) => {
-    if (edge.sourceHandle) {
-      console.log("Nodes :\n", nodes);
-      const edgeType = nodes.find((node) => node.type === "custom").data
-        .selects[edge.sourceHandle];
-      edge.type = edgeType;
-    }
-    return edge;
-  });
+  // const edgesWithUpdatedTypes = edges.map((edge) => {
+  //   if (edge.sourceHandle) {
+  //     console.log("Nodes :\n", nodes);
+  //     const edgeType = nodes.find((node) => node.type === "custom").data
+  //       .selects[edge.sourceHandle];
+  //     edge.type = edgeType;
+  //   }
+  //   return edge;
+  // });
 
   return (
     <ReactFlow
       nodes={nodes}
-      edges={edgesWithUpdatedTypes}
+      edges={edges}
       onNodesChange={onNodesChange}
       onEdgesChange={onEdgesChange}
       onConnect={onConnect}

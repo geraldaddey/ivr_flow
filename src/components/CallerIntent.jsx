@@ -58,12 +58,12 @@ function Select({ value, handleId, nodeId }) {
     </div>
   );
 }
-function Salesforce({ id, data }) {
+function CallerIntent({ id, data }) {
   return (
     <>
       <div className="custom-node__header">
         {/* <FaBeer icon={FaBeer} /> */}
-        <strong> Salesforce </strong>
+        <strong> CallerIntent </strong>
       </div>
       <div className="custom-node__body">
         {Object.keys(data.selects).map((handleId) => (
@@ -97,4 +97,4 @@ function Salesforce({ id, data }) {
   );
 }
 
-export default memo(Salesforce);
+export default memo(CallerIntent);
