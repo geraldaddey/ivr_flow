@@ -14,6 +14,9 @@ import {
 } from "../initial_element";
 import Salesforce from "./Salesforce";
 import CallerIntent from "./CallerIntent";
+import Condition from "./Condition";
+import Tags from "./Tags";
+import Connect from "./Connect";
 
 import "reactflow/dist/style.css";
 import "../overview.css";
@@ -36,7 +39,13 @@ const OverviewFlow = () => {
   );
 
   const nodeTypes = useMemo(
-    () => ({ custom: Salesforce, caller: CallerIntent }),
+    () => ({
+      custom: Salesforce,
+      caller: CallerIntent,
+      condition: Condition,
+      tags: Tags,
+      connect: Connect,
+    }),
     []
   );
 

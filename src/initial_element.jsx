@@ -20,25 +20,47 @@ export const nodes = [
     position: { x: 300, y: 200 },
     data: {
       selects: {
-        "handle-0": "On Test",
-        "handle-1": "On Fail",
+        "handle-0": "Demo",
+        "handle-1": "Pricing",
+        "handle-2": "No Input",
+        "handle-3": "Wrong Input",
       },
     },
   },
   {
     id: "6",
-    type: "output",
-    style: {
-      background: "#63B3ED",
-      color: "white",
-      width: 100,
-    },
+    type: "condition",
+    position: { x: 300, y: 200 },
     data: {
-      label: "Node",
+      selects: {
+        "handle-0": "Yes",
+        "handle-1": "No",
+      },
     },
-    position: { x: 400, y: 325 },
-    sourcePosition: Position.Right,
-    targetPosition: Position.Left,
+  },
+  {
+    id: "7",
+    type: "tags",
+    position: { x: 300, y: 200 },
+    data: {
+      selects: {
+        "handle-0": "Next Step",
+      },
+    },
+  },
+  {
+    id: "8",
+    type: "connect",
+    position: { x: 300, y: 200 },
+    data: {
+      label: <>Sales</>,
+      selects: {
+        "handle-0": "Answer",
+        "handle-1": "Hangup",
+        "handle-2": "No Answe",
+        "handle-3": "Failure",
+      },
+    },
   },
   {
     id: "7",

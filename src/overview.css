@@ -15,7 +15,37 @@
   color: #222;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 15%), 0 2px 4px -1px rgb(0 0 0 / 8%);
   border-radius: 2px;
-  border-top: 2px solid lightblue;
+  border-top: 2px solid rgb(104, 4, 147);
+}
+
+.react-flow__node-condition {
+  font-size: 10px;
+  width: 180px;
+  background: #ffffff;
+  color: #222;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 15%), 0 2px 4px -1px rgb(0 0 0 / 8%);
+  border-radius: 2px;
+  border-top: 2px solid rgb(214, 48, 48);
+}
+
+.react-flow__node-tags {
+  font-size: 10px;
+  width: 180px;
+  background: #ffffff;
+  color: #222;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 15%), 0 2px 4px -1px rgb(0 0 0 / 8%);
+  border-radius: 2px;
+  border-top: 2px solid rgb(231, 231, 58);
+}
+
+.react-flow__node-connect {
+  font-size: 10px;
+  width: 180px;
+  background: #ffffff;
+  color: #222;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 15%), 0 2px 4px -1px rgb(0 0 0 / 8%);
+  border-radius: 2px;
+  border-top: 2px solid rgb(174, 173, 230);
 }
 
 .react-flow__node-custom .react-flow__handle {
