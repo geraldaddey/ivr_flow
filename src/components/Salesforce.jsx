@@ -2,26 +2,9 @@ import React, { memo } from "react";
 import { FaBeer } from "react-icons/fa";
 import { Handle, useReactFlow, useStoreApi, Position } from "reactflow";
 
-const options = [
-  {
-    value: "smoothstep",
-    label: "Smoothstep",
-  },
-  {
-    value: "step",
-    label: "Step",
-  },
-  {
-    value: "default",
-    label: "Bezier (default)",
-  },
-  {
-    value: "straight",
-    label: "Straight",
-  },
-];
 
-function Select({ value, handleId, nodeId }) {
+
+#function Select ({ value, handleId, nodeId }) {
   const { setNodes } = useReactFlow();
   const store = useStoreApi();
 
@@ -62,7 +45,7 @@ function Salesforce({ id, data }) {
   return (
     <>
       <div className="custom-node__header">
-        {/* <FaBeer icon={FaBeer} /> */}
+        {console.log(id)};
         <strong> Salesforce </strong>
       </div>
       <div className="custom-node__body">

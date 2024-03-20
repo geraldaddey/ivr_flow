@@ -1,5 +1,5 @@
-import React from "react";
-import { MarkerType, Position } from "reactflow";
+
+import { MarkerType } from "reactflow";
 import "./App.css";
 
 export const nodes = [
