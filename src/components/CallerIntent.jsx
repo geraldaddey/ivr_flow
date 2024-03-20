@@ -16,7 +16,7 @@ function CallerIntent({ id, data }) {
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
-            }}cps 
+            }}
           >
             <label htmlFor={handleId} style={{ marginRight: "10px" }}>
               {data.selects[handleId]}

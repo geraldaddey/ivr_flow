@@ -107,7 +107,7 @@ export const edges = [
     },
   },
   {
-    id: "e4-5",
+    id: "e4-7",
     source: "3",
     target: "4",
     type: "smoothstep",
@@ -120,7 +120,7 @@ export const edges = [
     },
   },
   {
-    id: "e4-5",
+    id: "e4-8",
     source: "4",
     target: "5",
     type: "smoothstep",
