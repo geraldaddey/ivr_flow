@@ -89,7 +89,6 @@ function Salesforce({ id, data }) {
               }}
             />
             <Handle type="source" position={Position.Right} id={handleId} />
-            <Handle type="source" position={Position.Bottom} id={handleId} />
           </div>
         ))}
       </div>

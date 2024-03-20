@@ -66,6 +66,9 @@ function Condition({ id, data }) {
         <strong> Condition </strong>
       </div>
       <div className="custom-node__body">
+        <div> 
+          
+        </div>
         {Object.keys(data.selects).map((handleId) => (
           <div
             key={handleId}
@@ -84,12 +87,14 @@ function Condition({ id, data }) {
               id={handleId}
               name={handleId}
               value={data.selects[handleId]}
-              onChange={(evt) => {
+              onChange={ ( evt ) => {
+                // update handle id here ?
+                
                 // Handle radio button change here
               }}
             />
+            <Handle type="target" position={Position.Left} id={handleId} />
             <Handle type="source" position={Position.Right} id={handleId} />
-            <Handle type="source" position={Position.Bottom} id={handleId} />
           </div>
         ))}
       </div>

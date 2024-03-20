@@ -54,7 +54,7 @@ function Select({ value, handleId, nodeId }) {
           </option>
         ))}
       </select>
-      <Handle type="source" position={Position.Right} id={handleId} />
+      <Handle type="target" position={Position.Left} id={handleId} />
     </div>
   );
 }
@@ -88,8 +88,7 @@ function Connect({ id, data }) {
                 // Handle radio button change here
               }}
             />
-            <Handle type="source" position={Position.Right} id={handleId} />
-            <Handle type="source" position={Position.Bottom} id={handleId} />
+            <Handle type="target" position={Position.Left} id={handleId} />
           </div>
         ))}
       </div>

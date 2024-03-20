@@ -88,8 +88,8 @@ function Tags({ id, data }) {
                 // Handle radio button change here
               }}
             />
+            <Handle type="target" position={Position.Top} id={handleId} />
             <Handle type="source" position={Position.Right} id={handleId} />
-            <Handle type="source" position={Position.Bottom} id={handleId} />
           </div>
         ))}
       </div>

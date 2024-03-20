@@ -4,7 +4,7 @@ import "./App.css";
 
 export const nodes = [
   {
-    id: "4",
+    id: "1",
     type: "custom",
     position: { x: 100, y: 200 },
     data: {
@@ -15,7 +15,7 @@ export const nodes = [
     },
   },
   {
-    id: "5",
+    id: "2",
     type: "caller",
     position: { x: 300, y: 200 },
     data: {
@@ -28,9 +28,9 @@ export const nodes = [
     },
   },
   {
-    id: "6",
+    id: "3",
     type: "condition",
-    position: { x: 300, y: 200 },
+    position: { x: 300, y: 400 },
     data: {
       selects: {
         "handle-0": "Yes",
@@ -39,9 +39,9 @@ export const nodes = [
     },
   },
   {
-    id: "7",
+    id: "4",
     type: "tags",
-    position: { x: 300, y: 200 },
+    position: { x: 600, y: 400 },
     data: {
       selects: {
         "handle-0": "Next Step",
@@ -49,9 +49,9 @@ export const nodes = [
     },
   },
   {
-    id: "8",
+    id: "5",
     type: "connect",
-    position: { x: 300, y: 200 },
+    position: { x: 800, y: 600 },
     data: {
       label: <>Sales</>,
       selects: {
@@ -63,26 +63,62 @@ export const nodes = [
     },
   },
   {
-    id: "7",
+    id: "6",
     type: "default",
     className: "annotation",
     data: {
       label: (
         <>
-          On the bottom left you see the <strong>Controls</strong> and the
-          bottom right the <strong>MiniMap</strong>. This is also just a node 🥳
+          This is a sample demo of an IVR flow. Styling and Theming 
         </>
       ),
     },
     draggable: false,
     selectable: false,
-    position: { x: 150, y: 400 },
+    position: { x: 150, y: 600 },
   },
 ];
 
 export const edges = [
-  { id: "e1-2", source: "1", target: "2", label: "this is an edge label" },
-  { id: "e1-3", source: "4", target: "5", animated: true },
+  {
+    id: "e4-5",
+    source: "1",
+    target: "2",
+    type: "smoothstep",
+    sourceHandle: "handle-0",
+    data: {
+      selectIndex: 0,
+    },
+    markerEnd: {
+      type: MarkerType.ArrowClosed,
+    },
+  },
+  {
+    id: "e4-6",
+    source: "2",
+    target: "3",
+    type: "smoothstep",
+    sourceHandle: "handle-0",
+    data: {
+      selectIndex: 0,
+    },
+    markerEnd: {
+      type: MarkerType.ArrowClosed,
+    },
+  },
+  {
+    id: "e4-5",
+    source: "3",
+    target: "4",
+    type: "smoothstep",
+    sourceHandle: "handle-0",
+    data: {
+      selectIndex: 0,
+    },
+    markerEnd: {
+      type: MarkerType.ArrowClosed,
+    },
+  },
   {
     id: "e4-5",
     source: "4",
@@ -96,17 +132,5 @@ export const edges = [
       type: MarkerType.ArrowClosed,
     },
   },
-  {
-    id: "e4-6",
-    source: "4",
-    target: "6",
-    type: "smoothstep",
-    sourceHandle: "handle-1",
-    data: {
-      selectIndex: 1,
-    },
-    markerEnd: {
-      type: MarkerType.ArrowClosed,
-    },
-  },
+  
 ];
