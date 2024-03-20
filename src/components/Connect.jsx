@@ -66,6 +66,9 @@ function Connect({ id, data }) {
         <strong> Connect </strong>
       </div>
       <div className="custom-node__body">
+        <div style={{ background: "#F0F0FC", borderRadius: "5px" }}>
+          <span>Sales</span>
+        </div>
         {Object.keys(data.selects).map((handleId) => (
           <div
             key={handleId}

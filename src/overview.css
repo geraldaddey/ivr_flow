@@ -49,12 +49,39 @@
 }
 
 .react-flow__node-custom .react-flow__handle {
+  width: 6px;
+  height: 10px;
+  border-radius: 2px;
+  background-color: #4c9dee;
+} 
+
+.react-flow__node-caller .react-flow__handle {
+  width: 6px;
+  height: 10px;
+  border-radius: 2px;
+  background-color: #f057c8;
+}
+
+.react-flow__node-condition .react-flow__handle {
+  width: 6px;
+  height: 10px;
+  border-radius: 2px;
+  background-color: #f3345d;
+} 
+
+.react-flow__node-tags .react-flow__handle {
+  width: 6px;
+  height: 10px;
+  border-radius: 2px;
+  background-color: #fbe01a;
+}
+.react-flow__node-connect .react-flow__handle {
   top: 24px;
   right: -15px;
   width: 6px;
   height: 10px;
   border-radius: 2px;
-  background-color: #778899;
+  background-color: #0b61d8;
 }
 
 .react-flow__node.circle {

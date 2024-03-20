@@ -66,8 +66,8 @@ function Condition({ id, data }) {
         <strong> Condition </strong>
       </div>
       <div className="custom-node__body">
-        <div> 
-          
+        <div style={{ background: "#FEF4F3", borderRadius: "5px"  }}>
+          <span>If lead score is high</span>
         </div>
         {Object.keys(data.selects).map((handleId) => (
           <div
@@ -87,9 +87,8 @@ function Condition({ id, data }) {
               id={handleId}
               name={handleId}
               value={data.selects[handleId]}
-              onChange={ ( evt ) => {
+              onChange={(evt) => {
                 // update handle id here ?
-                
                 // Handle radio button change here
               }}
             />

@@ -66,6 +66,9 @@ function Tags({ id, data }) {
         <strong> Tags </strong>
       </div>
       <div className="custom-node__body">
+        <div style={{ background: "#FEF4F0", borderRadius: "5px" }}>
+          <span>Demo, Interested </span>
+        </div>
         {Object.keys(data.selects).map((handleId) => (
           <div
             key={handleId}
@@ -80,6 +83,7 @@ function Tags({ id, data }) {
             </label>
 
             <input
+              style={{ color: "red" }}
               type="radio"
               id={handleId}
               name={handleId}

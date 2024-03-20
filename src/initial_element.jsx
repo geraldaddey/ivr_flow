@@ -17,7 +17,7 @@ export const nodes = [
   {
     id: "2",
     type: "caller",
-    position: { x: 300, y: 200 },
+    position: { x: 100, y: 400 },
     data: {
       selects: {
         "handle-0": "Demo",
@@ -30,7 +30,7 @@ export const nodes = [
   {
     id: "3",
     type: "condition",
-    position: { x: 300, y: 400 },
+    position: { x: 500, y: 200 },
     data: {
       selects: {
         "handle-0": "Yes",
@@ -41,7 +41,7 @@ export const nodes = [
   {
     id: "4",
     type: "tags",
-    position: { x: 600, y: 400 },
+    position: { x: 500, y: 400 },
     data: {
       selects: {
         "handle-0": "Next Step",
@@ -51,7 +51,7 @@ export const nodes = [
   {
     id: "5",
     type: "connect",
-    position: { x: 800, y: 600 },
+    position: { x: 800, y: 200 },
     data: {
       label: <>Sales</>,
       selects: {
@@ -69,7 +69,7 @@ export const nodes = [
     data: {
       label: (
         <>
-          This is a sample demo of an IVR flow. Styling and Theming 
+          This is a sample demo of an IVR flow. Styling and Theming can be customized for all components here including dragging functionality. You can use the controls below as well as the minimap. Let me know what you think Thomas.
         </>
       ),
     },
