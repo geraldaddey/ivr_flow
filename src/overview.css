@@ -3,9 +3,9 @@
   width: 180px;
   background: #ffffff;
   color: #222;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 15%), 0 2px 4px -1px rgb(0 0 0 / 8%);
+  box-shadow: 0 4px 6px -1px rgba(253, 218, 218, 0.15), 0 2px 4px -1px rgb(0 0 0 / 8%);
   border-radius: 2px;
-  border-top: 2px solid lightblue;
+  border-top: 2px solid #add8e6;
 }
 
 .react-flow__node-caller {
@@ -15,7 +15,7 @@
   color: #222;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 15%), 0 2px 4px -1px rgb(0 0 0 / 8%);
   border-radius: 2px;
-  border-top: 2px solid rgb(104, 4, 147);
+  border-top: 2px solid #680493;
 }
 
 .react-flow__node-condition {
@@ -25,7 +25,7 @@
   color: #222;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 15%), 0 2px 4px -1px rgb(0 0 0 / 8%);
   border-radius: 2px;
-  border-top: 2px solid rgb(214, 48, 48);
+  border-top: 2px solid #d63030;
 }
 
 .react-flow__node-tags {
@@ -35,7 +35,7 @@
   color: #222;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 15%), 0 2px 4px -1px rgb(0 0 0 / 8%);
   border-radius: 2px;
-  border-top: 2px solid rgb(231, 231, 58);
+  border-top: 2px solid #e7e73a;
 }
 
 .react-flow__node-connect {
@@ -45,7 +45,7 @@
   color: #222;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 15%), 0 2px 4px -1px rgb(0 0 0 / 8%);
   border-radius: 2px;
-  border-top: 2px solid rgb(174, 173, 230);
+  border-top: 2px solid #aeade6;
 }
 
 .react-flow__node-custom .react-flow__handle {

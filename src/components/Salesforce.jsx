@@ -31,7 +31,7 @@ function Salesforce({ id, data }) {
                 // Handle radio button change here
               }}
             />
-            <Handle type="source" position={Position.Right} id={handleId} />
+            <Handle type="source"   position={Position.Right} id={handleId} />
           </div>
         ))}
       </div>
