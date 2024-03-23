@@ -71,11 +71,31 @@ const DnDFlow = () => {
         x: event.clientX,
         y: event.clientY,
       });
+
+     
+      let selects = {}
+        if (type === "custom") {
+          selects = initialNodes.find((node) => node.type === "custom").data
+            .selects
+        } else if (type === "caller") {
+          selects = initialNodes.find((node) => node.type === "caller").data
+            .selects;
+        } else if (type === "condition") {
+          selects = initialNodes.find((node) => node.type === "condition").data
+            .selects;
+        } else if (type === "tags") {
+          selects = initialNodes.find((node) => node.type === "tags").data
+            .selects;
+        } else if (type === "connect") {
+          // Add selects for Connect node
+          selects = initialNodes.find((node) => node.type === "connect").data
+            .selects;
+        }
       const newNode = {
         id: getId(),
         type,
         position,
-        data: { selects: initialNodes[id].data.selects },
+        data: { selects: selects },
       };
 
       setNodes((nds) => nds.concat(newNode));
