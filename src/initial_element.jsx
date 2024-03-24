@@ -69,7 +69,8 @@ export const nodes = [
     data: {
       label: (
         <>
-          This is a sample demo of an IVR flow by Gerald. Styling and Theming can be customized for all components here including dragging functionality and flow control among nodes. You can use the controls below as well as the minimap.
+          <h2> <strong>IVR Flow</strong></h2>
+          This is a sample demo of an IVR flow by Gerald. Styling and Theming can be customized for all components here including dragging functionality and flow control among nodes. You can use the controls below including the minimap.
         </>
       ),
     },
