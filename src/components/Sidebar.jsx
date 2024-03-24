@@ -19,17 +19,17 @@ const componentNames = {
 const getNodeIcon = (nodeType) => {
   switch (nodeType) {
     case "custom":
-      return <FaSalesforce />;
+      return <FaSalesforce color="white" />;
     case "caller":
-      return <FaPhone />;
+      return <FaPhone color="white" />;
     case "condition":
-      return <FaCheck />;
+      return <FaCheck color="white" />;
     case "tags":
-      return <FaTags />;
+      return <FaTags color="white" />;
     case "connect":
-      return <FaLink />;
+      return <FaLink color="white" />;
     default:
-      return <FaComment />;
+      return <FaComment  color="white"/>;
   }
 };
 const getNodeStyle = (nodeType) => {
@@ -83,7 +83,7 @@ export default () => {
           draggable
           style={{ ...getNodeStyle(node.type) }}
         >
-          { getNodeIcon( node.type ) }
+          {getNodeIcon(node.type)}
         </div>
       ))}
     </aside>

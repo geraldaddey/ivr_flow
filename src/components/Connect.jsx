@@ -5,7 +5,6 @@ function Connect({ id, data }) {
   return (
     <>
       <div className="custom-node__header">
-        {console.log(id)};
         <strong> Connect </strong>
       </div>
       <div className="custom-node__body">

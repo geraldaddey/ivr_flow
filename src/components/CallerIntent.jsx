@@ -5,7 +5,6 @@ function CallerIntent({ id, data }) {
   return (
     <>
       <div className="custom-node__header">
-        {console.log(id)};
         <strong> CallerIntent </strong>
       </div>
       <div className="custom-node__body">

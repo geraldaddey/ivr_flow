@@ -82,6 +82,7 @@ export const nodes = [
 export const edges = [
   {
     id: "e4-5",
+    style: { stroke: "#ADD8E6" },
     source: "1",
     target: "2",
     type: "smoothstep",
@@ -95,6 +96,7 @@ export const edges = [
   },
   {
     id: "e4-6",
+    style: { stroke: "#680393" },
     source: "2",
     target: "3",
     type: "smoothstep",
@@ -108,6 +110,7 @@ export const edges = [
   },
   {
     id: "e4-7",
+    style: { stroke: "#D63030" },
     source: "3",
     target: "4",
     type: "smoothstep",
@@ -121,6 +124,7 @@ export const edges = [
   },
   {
     id: "e4-8",
+    style: { stroke: "#E7E73A" },
     source: "4",
     target: "5",
     type: "smoothstep",
@@ -132,5 +136,4 @@ export const edges = [
       type: MarkerType.ArrowClosed,
     },
   },
-  
 ];
