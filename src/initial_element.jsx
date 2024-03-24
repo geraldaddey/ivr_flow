@@ -62,19 +62,19 @@ export const nodes = [
       },
     },
   },
-  {
+  { 
     id: "6",
     type: "default",
     className: "annotation",
     data: {
       label: (
         <>
-          This is a sample demo of an IVR flow. Styling and Theming can be customized for all components here including dragging functionality. You can use the controls below as well as the minimap. Let me know what you think Thomas.
+          This is a sample demo of an IVR flow by Gerald. Styling and Theming can be customized for all components here including dragging functionality and flow control among nodes. You can use the controls below as well as the minimap.
         </>
       ),
     },
-    draggable: false,
-    selectable: false,
+    draggable: true,
+    selectable: true,
     position: { x: 150, y: 600 },
   },
 ];

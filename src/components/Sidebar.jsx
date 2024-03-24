@@ -62,28 +62,51 @@ const getNodeStyle = (nodeType) => {
     width: "40px",
     height: "40px",
     margin: "20px auto",
+    border: "1px solid transparent",
+    boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)",
+    transition: "background-color 0.3s ease-in-out", // Add transition for smooth effect
+    cursor: "pointer", // Add cu
   };
 };
+  
 
 export default () => {
- const onDragStart = (event, nodeType) => {
-   event.dataTransfer.setData("application/reactflow", nodeType);
-   event.dataTransfer.effectAllowed = "copy";
- };
+  const onDragStart = (event, nodeType) => {
+    event.dataTransfer.setData("application/reactflow", nodeType);
+    event.dataTransfer.effectAllowed = "copy";
+
+    // Add custom drag effects
+    event.currentTarget.style.opacity = "0.5";
+    event.currentTarget.style.cursor = "grabbing";
+    event.currentTarget.style.scale = "0.8";
+    
+    
+    
+  };
+
+    const onDragEnd = (event, nodeType) => {
+      // Reset custom drag effects
+      event.currentTarget.style.opacity = "1";
+      event.currentTarget.style.cursor = "grab";
+      event.currentTarget.style.border = "none";
+      event.currentTarget.style.scale = "1";
+      
+    };
   return (
     <aside>
-      <div className="description">
-        You can drag these nodes to the flow on the left.
-      </div>
+      <div>You can drag these nodes to the flow on the left and connect other nodes based on their configurations .</div>
       {initialNodes.map((node) => (
-        <div
-          key={node.id}
-          // className={`dndnode ${node.type}`}
-          onDragStart={(event) => onDragStart(event, node.type)}
-          draggable
-          style={{ ...getNodeStyle(node.type) }}
-        >
-          {getNodeIcon(node.type)}
+        <div key={node.id} style={{ marginBottom: "20px" }}>
+          <div
+            className={`dndnode ${node.type}`}
+            onDragStart={ ( event ) => onDragStart( event, node.type ) }
+            onDragEnd={ ( event ) => onDragEnd( event ) }
+            draggable
+            style={{ ...getNodeStyle(node.type), marginBottom: "10px" }}
+          >
+            {getNodeIcon(node.type)}
+          </div>
+          <div style={{ textAlign: "center" }}>{componentNames[node.type]}</div>
         </div>
       ))}
     </aside>

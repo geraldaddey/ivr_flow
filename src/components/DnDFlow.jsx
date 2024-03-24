@@ -20,6 +20,7 @@ import CallerIntent from "./CallerIntent";
 import Condition from "./Condition";
 import Tags from "./Tags";
 import Connect from "./Connect";
+import Connector from "./Connector"
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 
@@ -71,31 +72,37 @@ const DnDFlow = () => {
         x: event.clientX,
         y: event.clientY,
       });
-
-     
-      let selects = {}
-        if (type === "custom") {
-          selects = initialNodes.find((node) => node.type === "custom").data
-            .selects
-        } else if (type === "caller") {
-          selects = initialNodes.find((node) => node.type === "caller").data
-            .selects;
-        } else if (type === "condition") {
-          selects = initialNodes.find((node) => node.type === "condition").data
-            .selects;
-        } else if (type === "tags") {
-          selects = initialNodes.find((node) => node.type === "tags").data
-            .selects;
-        } else if (type === "connect") {
-          // Add selects for Connect node
-          selects = initialNodes.find((node) => node.type === "connect").data
-            .selects;
-        }
+      
+      let selects = {}; 
+      let class_name= ""
+      if (type === "custom") {
+        selects = initialNodes.find((node) => node.type === "custom").data
+          .selects;
+      } else if (type === "caller") {
+        selects = initialNodes.find((node) => node.type === "caller").data
+          .selects;
+      } else if (type === "condition") {
+        selects = initialNodes.find((node) => node.type === "condition").data
+          .selects;
+      } else if (type === "tags") {
+        selects = initialNodes.find((node) => node.type === "tags").data
+          .selects;
+      } else if (type === "connect") {
+        // Add selects for Connect node
+        selects = initialNodes.find((node) => node.type === "connect").data
+          .selects;
+      }
+      else {
+        selects = initialNodes.find( ( node ) => node.type === "default" ).data
+          .label;
+        class_name = "annotation";
+      }
       const newNode = {
         id: getId(),
         type,
         position,
         data: { selects: selects },
+        className: class_name,
       };
 
       setNodes((nds) => nds.concat(newNode));
@@ -117,9 +124,11 @@ const DnDFlow = () => {
               onInit={setReactFlowInstance}
               onDrop={onDrop}
               onDragOver={onDragOver}
-              fitView
               attributionPosition="bottom-left"
-              nodeTypes={nodeTypes}
+              fitView
+              nodeTypes={ nodeTypes }
+              connectionLineComponent={Connector}
+              
             >
               <Controls />
             </ReactFlow>
